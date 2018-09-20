@@ -1,6 +1,14 @@
 import katex from "katex"
 import './katex/katex.css'
 
+function HTMLDecode(text) {    
+    var temp = document.createElement("div")
+    temp.innerHTML = text
+    var output = temp.innerText || temp.textContent
+    temp = null
+    return output
+}
+
 export default {
     install: function (Vue, options) {
         Vue.directive("katex",{
@@ -19,7 +27,7 @@ export default {
                 var arr = txt.split(flag)
                 arr.forEach((item,index)=>{
                     if(index%2 == 1){
-                        arr[index] = katex.renderToString(item,options);
+                        arr[index] = katex.renderToString(HTMLDecode(item),options);
                     }
                 })
                 txt = arr.join('')
