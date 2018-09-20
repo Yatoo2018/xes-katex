@@ -23,11 +23,15 @@ export default {
                     var options = binding.value.options || {}
                     flag = binding.value.flag ? binding.value.flag : flag
                 }
-                options = Object.assign({displayMode:true},options)
+                options = Object.assign({displayMode:true,throwOnError:true},options)
                 var arr = txt.split(flag)
                 arr.forEach((item,index)=>{
                     if(index%2 == 1){
-                        arr[index] = katex.renderToString(HTMLDecode(item),options);
+                        try {
+                            arr[index] = katex.renderToString(HTMLDecode(item),options);
+                        } catch (err) {
+                            console.log(err)
+                        }
                     }
                 })
                 txt = arr.join('')
