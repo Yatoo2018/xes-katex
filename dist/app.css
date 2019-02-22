@@ -13,11 +13,15 @@
     display: block;
     margin: 0 auto;
 }
-.latex-resolve{
+.row{
+    padding-top: 20px;
+    display: flex;
+    width: 600px;
+    margin: 0 auto;
+    line-height: 40px;
+}
+.row label{
     width: 80px;
-    height: 30px;
-    display: block;
-    margin: 50px auto;
 }
 
 /* stylelint-disable font-family-no-missing-generic-family-keyword */

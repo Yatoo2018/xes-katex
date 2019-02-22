@@ -5,7 +5,7 @@ import xesKatex from './index'
 // import '../dist/katex.css'
 
 Vue.config.productionTip = false
-Vue.use(xesKatex)
+Vue.use(xesKatex,{flag:'$$'})
 
 new Vue({
   el: '#app',
