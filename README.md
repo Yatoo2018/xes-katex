@@ -2,9 +2,9 @@
 
 
 ### Foreword
-在学而思网校各个项目中有大量的latex公式需要解析，它们和普通文本混合在一起，比如下面这段话：  
-'先化简，再求值：$$\\frac{a}{a-b}\\left( \\frac{1}{b}-\\frac{1}{a} \\right)+\\frac{a-1}{b}$$，其中$$a=2$$，$$b=\\frac{1}{3}$$．'  
 相比MathJax，Katex的解析速度更快，但是从已知的资料来看Katex并不能解析上面的混合文本，为了满足项目需求，我们开发了xes-katex
+举个例子：
+'先化简，再求值：$$\\frac{a}{a-b}\\left( \\frac{1}{b}-\\frac{1}{a} \\right)+\\frac{a-1}{b}$$，其中$$a=2$$，$$b=\\frac{1}{3}$$．'  
 
 ### Installation
 
