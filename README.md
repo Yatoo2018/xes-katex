@@ -16,9 +16,9 @@ npm install xes-katex
 
 ```
 import XesKatex from 'xes-katex'
+import 'xes-katex/dist/katex.css'
 
 Vue.use(XesKatex)
-import 'xes-katex/dist/katex.css'
 
 ```
 * 在您的html代码中使用（不要忘记转义所有反斜杠）
@@ -31,6 +31,11 @@ import 'xes-katex/dist/katex.css'
 ```
 <div v-katex:&&="'其中&&b=\\frac{1}{3}&&．'"></div>
 ```
+或者全局配置
+```
+Vue.use(xesKatex,{flag:'$$'})
+```
+
 * 如果您需要修改katex的选项配置
 
 ```
