@@ -4,7 +4,7 @@
       <!-- <button class="latex-resolve" @click="toResolve">解析</button> -->
       <div class="row">
           <label>解析：</label>
-          <div v-katex="latex"></div>
+          <div v-katex="{content:latex,flag:'$$'}"></div>
       </div>
   </div>
 </template>

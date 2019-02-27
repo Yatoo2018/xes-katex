@@ -17,7 +17,7 @@ function avoidXSS(val){
     return val
 }
 function decode(el,binding,vnode,opt){
-    if(!binding.value) return
+    binding.value?binding.value:''
     var flag = opt&&opt.flag ? opt.flag : '$$'
     flag = binding.arg || flag
     if(typeof binding.value == "string"){
