@@ -8,7 +8,8 @@
   ],
   "scripts": {
     "dev": "webpack-dev-server --config ./build/webpack.base.conf.js",
-    "build": "webpack --config ./build/webpack.base.conf.js"
+    "build": "webpack --config ./build/webpack.base.conf.js",
+    "pbuild": "NODE_ENV=production webpack --config ./build/webpack.prod.conf.js"
   },
   "keywords": [],
   "author": "",

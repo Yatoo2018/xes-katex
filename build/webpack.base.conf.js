@@ -4,6 +4,7 @@ let CleanWebpackPlugin = require('clean-webpack-plugin')
 let VueLoaderPlugin = require('vue-loader/lib/plugin');
 let MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
+
 module.exports = {
     mode: 'development',
     entry:{
@@ -71,6 +72,7 @@ module.exports = {
             filename: 'index.html',
             chunks: ['app']
         }),
+        
         new VueLoaderPlugin(),
         new CleanWebpackPlugin(['../dist']),
         new MiniCssExtractPlugin({
